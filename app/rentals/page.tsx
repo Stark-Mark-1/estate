@@ -5,10 +5,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MapPin, Bed, Bath, Square, ArrowRight, Filter, DollarSign } from 'lucide-react'
 import { useContactModal } from '@/contexts/ContactModalContext'
+import ContactForm from '@/components/ContactForm'
 
 export default function Rentals() {
   const { openModal } = useContactModal()
   const [filter, setFilter] = useState('all')
+  const [isContactOpen, setIsContactOpen] = useState(false)
 
   const rentals = [
     {
@@ -331,6 +333,7 @@ export default function Rentals() {
         </motion.div>
       </section>
 
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   )
 }
