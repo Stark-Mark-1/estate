@@ -1,12 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MapPin, Calendar, ArrowRight, Clock } from 'lucide-react'
 import { useContactModal } from '@/contexts/ContactModalContext'
+import ContactForm from '@/components/ContactForm'
 
 export default function UpcomingProjects() {
   const { openModal } = useContactModal()
+  const [isContactOpen, setIsContactOpen] = useState(false)
 
   const upcomingProjects = [
     {
@@ -198,6 +201,7 @@ export default function UpcomingProjects() {
         </motion.div>
       </section>
 
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   )
 }
