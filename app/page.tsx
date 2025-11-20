@@ -46,7 +46,7 @@ export default function Home() {
       name: 'Sarah Johnson',
       role: 'Homeowner',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-      quote: 'ESTATE helped us find our dream home. The entire process was seamless and professional.',
+      quote: 'Every morning I wake up and pinch myself. This is home. This is where our family grows, laughs, and creates memories that will last forever.',
       property: 'Skyline Towers, Unit 1205',
     },
     {
@@ -54,7 +54,7 @@ export default function Home() {
       name: 'Michael Chen',
       role: 'Investor',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
-      quote: 'Excellent investment opportunity. The returns have exceeded our expectations.',
+      quote: 'Not just an investment, but a place where dreams take shape. Watching families build their lives here brings me immense joy.',
       property: 'Oceanview Residences, Unit 804',
     },
     {
@@ -62,15 +62,15 @@ export default function Home() {
       name: 'Emily Rodriguez',
       role: 'First-time Buyer',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
-      quote: 'The team guided us through every step. We couldn\'t be happier with our new home.',
+      quote: 'From dreaming to reality. Our first home is everything we imagined and more. The kids have space to play, and we have space to breathe.',
       property: 'Garden Estates, Unit 305',
     },
   ]
 
-  const stats = [
-    { label: 'Projects Completed', value: '50+', icon: Award },
-    { label: 'Happy Customers', value: '2000+', icon: Star },
-    { label: 'Years of Excellence', value: '15+', icon: TrendingUp },
+  const aspirations = [
+    { label: 'Dream Homes Delivered', value: '2000+', icon: Star, description: 'Families living their best lives' },
+    { label: 'Memories Created', value: 'Countless', icon: TrendingUp, description: 'Moments that matter, every day' },
+    { label: 'Lives Transformed', value: 'Every Day', icon: Award, description: 'Your happiness is our success' },
   ]
 
   return (
@@ -88,13 +88,13 @@ export default function Home() {
             className="space-y-8"
           >
             <h1 className="text-6xl md:text-8xl font-bold">
-              <span className="gradient-text">ESTATE</span>
+              <span className="gradient-text">Your Dream Life</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Premium Real Estate Solutions for Your Dream Property
+              Starts with the Perfect Home
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Discover luxury properties, exceptional service, and unmatched expertise in real estate development.
+              Wake up to breathtaking views. Create memories in spaces designed for living. Build the life you've always imagined.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <button
@@ -118,15 +118,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Aspirations Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4 gradient-text">Where Dreams Come True</h2>
+            <p className="text-xl text-gray-400">Every home is a new beginning</p>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon
+            {aspirations.map((aspiration, index) => {
+              const Icon = aspiration.icon
               return (
                 <motion.div
-                  key={stat.label}
+                  key={aspiration.label}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -134,8 +143,9 @@ export default function Home() {
                   className="text-center p-8 rounded-2xl glass-effect hover-lift"
                 >
                   <Icon size={48} className="text-blue-400 mx-auto mb-4" />
-                  <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-4xl font-bold gradient-text mb-2">{aspiration.value}</div>
+                  <div className="text-gray-300 font-semibold mb-2">{aspiration.label}</div>
+                  <div className="text-sm text-gray-400">{aspiration.description}</div>
                 </motion.div>
               )
             })}
@@ -152,9 +162,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-4 gradient-text">Marquee Projects</h2>
+            <h2 className="text-5xl font-bold mb-4 gradient-text">Your Next Chapter Awaits</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Explore our flagship developments that redefine luxury living
+              Discover homes where every sunrise brings new possibilities, and every evening ends with contentment
             </p>
           </motion.div>
 
@@ -184,6 +194,7 @@ export default function Home() {
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                       <p className="text-gray-400 mb-4">{project.location}</p>
+                      <p className="text-sm text-gray-500 mb-4 italic">Where your story begins</p>
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-gray-300">{project.units}</span>
                         <span className="text-blue-400 font-semibold">{project.price}</span>
@@ -216,9 +227,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-4 gradient-text">Customer Success Stories</h2>
+            <h2 className="text-5xl font-bold mb-4 gradient-text">Lives Transformed, Dreams Realized</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Real experiences from our satisfied clients
+              Real stories of happiness, belonging, and the joy of coming home
             </p>
           </motion.div>
 
