@@ -26,6 +26,7 @@ export default function Navigation() {
     { href: '/projects', label: 'Projects' },
     { href: '/upcoming-projects', label: 'Upcoming' },
     { href: '/rentals', label: 'Rentals' },
+    { href: '/constructions', label: 'Constructions' },
     { href: '/testimonials', label: 'Testimonials' },
     { href: '/about', label: 'About' },
     { href: '/media-coverage', label: 'Media' },
