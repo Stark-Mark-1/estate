@@ -127,18 +127,18 @@ export default function Constructions() {
             className="space-y-6"
           >
             <h1 className="text-6xl font-bold gradient-text">Construction Services</h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl text-utility-grey leading-relaxed">
               Have a plot? We'll build your dream home from scratch. Our comprehensive construction services 
               handle everything from design to delivery, so you can focus on what matters most.
             </p>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-lg text-utility-grey leading-relaxed">
               We take care of all the hassles - permits, approvals, construction, interior design, and quality 
               checks. You just need to provide the plot, and we'll deliver a finished, move-in ready home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={openModal}
-                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2"
+                className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Get in Touch</span>
                 <ArrowRight size={20} />
@@ -147,7 +147,7 @@ export default function Constructions() {
                 href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2"
+                className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <MessageCircle size={20} />
                 <span>WhatsApp Us</span>
@@ -178,7 +178,7 @@ export default function Constructions() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">What We Offer</h2>
-          <p className="text-xl text-gray-400">Complete end-to-end construction solutions</p>
+          <p className="text-xl text-utility-grey">Complete end-to-end construction solutions</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
@@ -192,9 +192,9 @@ export default function Constructions() {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 rounded-2xl glass-effect hover-lift"
               >
-                <Icon size={48} className="text-blue-400 mb-4" />
+                <Icon size={48} className="text-secondary mb-4" />
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm">{service.description}</p>
+                <p className="text-utility-grey text-sm">{service.description}</p>
               </motion.div>
             )
           })}
@@ -210,7 +210,7 @@ export default function Constructions() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">Our Process</h2>
-          <p className="text-xl text-gray-400">Simple, transparent, and hassle-free</p>
+          <p className="text-xl text-utility-grey">Simple, transparent, and hassle-free</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {process.map((step, index) => (
@@ -222,9 +222,9 @@ export default function Constructions() {
               transition={{ delay: index * 0.1 }}
               className="p-6 rounded-2xl glass-effect hover-lift relative"
             >
-              <div className="text-4xl font-bold text-blue-400 mb-4 opacity-50">{step.step}</div>
+              <div className="text-4xl font-bold text-secondary mb-4 opacity-50">{step.step}</div>
               <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-400 text-sm">{step.description}</p>
+              <p className="text-utility-grey text-sm">{step.description}</p>
             </motion.div>
           ))}
         </div>
@@ -253,7 +253,7 @@ export default function Constructions() {
             className="space-y-6"
           >
             <h2 className="text-5xl font-bold gradient-text">Why Choose Us?</h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-utility-grey">
               Building a home is a significant investment. We make it easy, stress-free, and rewarding.
             </p>
             <div className="space-y-4">
@@ -266,8 +266,8 @@ export default function Constructions() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle size={24} className="text-green-400 flex-shrink-0 mt-1" />
-                  <p className="text-gray-300">{benefit}</p>
+                  <CheckCircle size={24} className="text-accent-amber flex-shrink-0 mt-1" />
+                  <p className="text-utility-grey">{benefit}</p>
                 </motion.div>
               ))}
             </div>
@@ -284,7 +284,7 @@ export default function Constructions() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">Success Stories</h2>
-          <p className="text-xl text-gray-400">Real homes, real stories, real satisfaction</p>
+          <p className="text-xl text-utility-grey">Real homes, real stories, real satisfaction</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {successStories.map((story, index) => (
@@ -308,18 +308,18 @@ export default function Constructions() {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold">{story.name}</h3>
-                    <p className="text-sm text-gray-400">{story.location} • {story.plotSize}</p>
+                    <p className="text-sm text-utility-grey">{story.location} • {story.plotSize}</p>
                   </div>
                   <div className="flex items-center space-x-1">
                     {[...Array(story.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                      <Star key={i} size={16} className="text-accent-amber fill-accent-amber" />
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 italic">&ldquo;{story.quote}&rdquo;</p>
-                <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                  <span className="text-sm text-gray-400">Completed in {story.timeline}</span>
-                  <span className="text-sm text-blue-400 font-medium">✓ Delivered on time</span>
+                <p className="text-utility-grey mb-4 italic">&ldquo;{story.quote}&rdquo;</p>
+                <div className="flex items-center justify-between pt-4 border-t border-utility-grey/20">
+                  <span className="text-sm text-utility-grey">Completed in {story.timeline}</span>
+                  <span className="text-sm text-secondary font-medium">✓ Delivered on time</span>
                 </div>
               </div>
             </motion.div>
@@ -336,13 +336,13 @@ export default function Constructions() {
           className="rounded-2xl glass-effect p-12 text-center"
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Ready to Build Your Dream Home?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-utility-grey mb-8 max-w-2xl mx-auto">
             Let's discuss your plot and requirements. Our team is ready to turn your vision into reality.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openModal}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
+              className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
             >
               <span>Get in Touch</span>
               <ArrowRight size={20} />
@@ -351,7 +351,7 @@ export default function Constructions() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
+              className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors flex items-center space-x-2"
             >
               <MessageCircle size={20} />
               <span>WhatsApp Us</span>

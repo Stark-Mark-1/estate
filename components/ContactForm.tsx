@@ -33,7 +33,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-primary/80 backdrop-blur-sm z-50"
             onClick={onClose}
           />
           <motion.div
@@ -43,12 +43,12 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
           >
             <div 
-              className="bg-gray-900 rounded-2xl p-8 max-w-md w-full glass-effect border border-white/10 relative pointer-events-auto"
+              className="bg-white rounded-2xl p-8 max-w-md w-full glass-effect border border-utility-grey/20 relative pointer-events-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                className="absolute top-4 right-4 text-utility-grey hover:text-primary transition-colors"
               >
                 <X size={24} />
               </button>
@@ -57,7 +57,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">
                     Name
                   </label>
                   <input
@@ -66,13 +66,13 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg glass-effect border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg glass-effect border border-utility-grey/30 text-primary placeholder-utility-grey focus:outline-none focus:border-secondary transition-colors"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="number" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="number" className="block text-sm font-medium text-primary mb-2">
                     Phone Number
                   </label>
                   <input
@@ -81,13 +81,13 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     required
                     value={formData.number}
                     onChange={(e) => setFormData({ ...formData, number: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg glass-effect border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg glass-effect border border-utility-grey/30 text-primary placeholder-utility-grey focus:outline-none focus:border-secondary transition-colors"
                     placeholder="+1 (234) 567-8900"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="requirement" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="requirement" className="block text-sm font-medium text-primary mb-2">
                     Requirement
                   </label>
                   <textarea
@@ -96,44 +96,44 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     value={formData.requirement}
                     onChange={(e) => setFormData({ ...formData, requirement: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg glass-effect border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg glass-effect border border-utility-grey/30 text-primary placeholder-utility-grey focus:outline-none focus:border-secondary transition-colors resize-none"
                     placeholder="Tell us about your requirement..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+                  className="w-full px-6 py-3 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
                 >
                   Submit Inquiry
                 </button>
               </form>
 
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="text-sm text-gray-400 mb-4 text-center">Or contact us directly:</p>
+              <div className="mt-6 pt-6 border-t border-utility-grey/20">
+                <p className="text-sm text-utility-grey mb-4 text-center">Or contact us directly:</p>
                 <div className="grid grid-cols-3 gap-3">
                   <a
                     href="tel:+1234567890"
-                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-white/10 transition-colors group"
+                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-background transition-colors group"
                   >
-                    <Phone size={20} className="text-blue-400 mb-1 group-hover:scale-110 transition-transform" />
-                    <span className="text-xs text-gray-400 group-hover:text-white">Call</span>
+                    <Phone size={20} className="text-accent-coral mb-1 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs text-utility-grey group-hover:text-primary">Call</span>
                   </a>
                   <a
                     href="https://wa.me/1234567890"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-white/10 transition-colors group"
+                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-background transition-colors group"
                   >
-                    <MessageCircle size={20} className="text-green-400 mb-1 group-hover:scale-110 transition-transform" />
-                    <span className="text-xs text-gray-400 group-hover:text-white">WhatsApp</span>
+                    <MessageCircle size={20} className="text-accent-teal mb-1 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs text-utility-grey group-hover:text-primary">WhatsApp</span>
                   </a>
                   <a
                     href="mailto:info@estate.com"
-                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-white/10 transition-colors group"
+                    className="flex flex-col items-center justify-center p-3 rounded-lg glass-effect hover:bg-background transition-colors group"
                   >
-                    <Mail size={20} className="text-purple-400 mb-1 group-hover:scale-110 transition-transform" />
-                    <span className="text-xs text-gray-400 group-hover:text-white">Email</span>
+                    <Mail size={20} className="text-accent-amber mb-1 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs text-utility-grey group-hover:text-primary">Email</span>
                   </a>
                 </div>
               </div>

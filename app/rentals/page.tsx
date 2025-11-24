@@ -155,7 +155,7 @@ export default function Rentals() {
           className="text-center"
         >
           <h1 className="text-6xl font-bold mb-6 gradient-text">Rental Properties</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-utility-grey max-w-3xl mx-auto">
             Discover premium rental properties that suit your lifestyle and budget
           </p>
         </motion.div>
@@ -164,13 +164,13 @@ export default function Rentals() {
       {/* Filter Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="flex items-center justify-center space-x-4 flex-wrap gap-4">
-          <Filter size={20} className="text-gray-400" />
+          <Filter size={20} className="text-utility-grey" />
           <button
             onClick={() => setFilter('all')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'all'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             All Properties
@@ -179,8 +179,8 @@ export default function Rentals() {
             onClick={() => setFilter('apartment')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'apartment'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Apartments
@@ -189,8 +189,8 @@ export default function Rentals() {
             onClick={() => setFilter('penthouse')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'penthouse'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Penthouses
@@ -199,8 +199,8 @@ export default function Rentals() {
             onClick={() => setFilter('villa')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'villa'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Villas
@@ -209,8 +209,8 @@ export default function Rentals() {
             onClick={() => setFilter('commercial')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'commercial'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Commercial
@@ -238,59 +238,59 @@ export default function Rentals() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-600 text-white text-sm font-medium">
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent-amber text-primary text-sm font-medium">
                     {rental.available}
                   </div>
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-purple-600 text-white text-sm font-medium">
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-teal text-primary text-sm font-medium">
                     {rental.type}
                   </div>
                   {rental.furnished && (
-                    <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-medium">
+                    <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-secondary text-white text-xs font-medium">
                       Furnished
                     </div>
                   )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{rental.title}</h3>
-                  <div className="flex items-center text-gray-400 mb-4">
-                    <MapPin size={16} className="mr-2" />
+                  <div className="flex items-center text-utility-grey mb-4">
+                    <MapPin size={16} className="mr-2 text-secondary" />
                     <span>{rental.location}</span>
                   </div>
-                  <p className="text-gray-300 mb-6 text-sm">{rental.description}</p>
+                  <p className="text-utility-grey mb-6 text-sm">{rental.description}</p>
                   
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Bed size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{rental.bedrooms}</span>
+                      <Bed size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{rental.bedrooms}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Bath size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{rental.bathrooms}</span>
+                      <Bath size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{rental.bathrooms}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Square size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{rental.area}</span>
+                      <Square size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{rental.area}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-white/10 mb-4">
+                  <div className="flex items-center justify-between pt-4 border-t border-utility-grey/20 mb-4">
                     <div>
-                      <div className="text-xs text-gray-400">Monthly Rent</div>
-                      <div className="text-2xl font-bold text-blue-400">{rental.price}</div>
+                      <div className="text-xs text-utility-grey">Monthly Rent</div>
+                      <div className="text-2xl font-bold text-secondary">{rental.price}</div>
                     </div>
                   </div>
 
                   <div className="flex space-x-3">
                     <button
                       onClick={openModal}
-                      className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-center flex items-center justify-center space-x-2"
+                      className="flex-1 px-4 py-2 bg-accent-coral hover:bg-secondary text-white font-medium rounded-lg transition-colors text-center flex items-center justify-center space-x-2"
                     >
                       <span>Schedule Viewing</span>
                       <ArrowRight size={16} />
                     </button>
                     <button
                       onClick={openModal}
-                      className="px-4 py-2 glass-effect hover:bg-white/10 text-white font-medium rounded-lg transition-colors"
+                      className="px-4 py-2 glass-effect hover:bg-background text-primary font-medium rounded-lg transition-colors"
                     >
                       Enquire
                     </button>
@@ -311,13 +311,13 @@ export default function Rentals() {
           className="text-center p-12 rounded-2xl glass-effect"
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Looking for a Rental?</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-utility-grey mb-8">
             Contact us to schedule a viewing or discuss your rental requirements
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsContactOpen(true)}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
             >
               Get in Touch
             </button>
@@ -325,7 +325,7 @@ export default function Rentals() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors"
             >
               WhatsApp Us
             </a>

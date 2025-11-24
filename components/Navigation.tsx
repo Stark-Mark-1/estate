@@ -54,8 +54,8 @@ export default function Navigation() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   pathname === link.href
-                    ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'text-secondary'
+                    : 'text-utility-grey hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={openModal}
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+              className="px-4 py-2 text-sm font-medium text-white bg-accent-coral hover:bg-secondary rounded-lg transition-colors"
             >
               Get in Touch
             </button>
@@ -75,7 +75,7 @@ export default function Navigation() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-primary bg-accent-teal hover:bg-secondary rounded-lg transition-colors"
             >
               <MessageCircle size={16} />
               <span>WhatsApp Us</span>
@@ -84,7 +84,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,7 +99,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-effect border-t border-white/10"
+            className="md:hidden glass-effect border-t border-utility-grey/20"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -109,20 +109,20 @@ export default function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block text-base font-medium ${
                     pathname === link.href
-                      ? 'text-blue-400'
-                      : 'text-gray-300'
+                      ? 'text-secondary'
+                      : 'text-utility-grey'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3 border-t border-white/10">
+              <div className="pt-4 space-y-3 border-t border-utility-grey/20">
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false)
                     openModal()
                   }}
-                  className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                  className="w-full px-4 py-2 text-sm font-medium text-white bg-accent-coral hover:bg-secondary rounded-lg transition-colors"
                 >
                   Get in Touch
                 </button>
@@ -130,7 +130,7 @@ export default function Navigation() {
                   href="https://wa.me/1234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 w-full px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+                  className="flex items-center justify-center space-x-2 w-full px-4 py-2 text-sm font-medium text-primary bg-accent-teal hover:bg-secondary rounded-lg transition-colors"
                 >
                   <MessageCircle size={16} />
                   <span>WhatsApp Us</span>

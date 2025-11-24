@@ -267,7 +267,7 @@ export default function Chatbot() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-accent-coral hover:bg-secondary text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
       </motion.button>
@@ -279,23 +279,23 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] glass-effect rounded-2xl border border-white/10 shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] glass-effect rounded-2xl border border-utility-grey/20 shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="p-4 border-b border-white/10 bg-white/5">
+            <div className="p-4 border-b border-utility-grey/20 bg-white/70">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                    <MessageCircle size={20} className="text-white" />
+                  <div className="w-10 h-10 bg-accent-teal rounded-full flex items-center justify-center">
+                    <MessageCircle size={20} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white">ESTATE Assistant</h3>
-                    <p className="text-xs text-gray-400">We're online</p>
+                    <h3 className="font-semibold text-primary">ESTATE Assistant</h3>
+                    <p className="text-xs text-utility-grey">We're online</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-utility-grey hover:text-primary transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -314,8 +314,8 @@ export default function Chatbot() {
                     animate={{ opacity: 1, y: 0 }}
                     className={`max-w-[80%] rounded-2xl p-3 ${
                       message.isBot
-                        ? 'bg-white/10 text-gray-100'
-                        : 'bg-blue-600 text-white'
+                        ? 'bg-white text-primary border border-utility-grey/30'
+                        : 'bg-accent-coral text-white'
                     }`}
                   >
                     <p className="text-sm">{message.text}</p>
@@ -325,7 +325,7 @@ export default function Chatbot() {
                           <button
                             key={idx}
                             onClick={() => handleOptionClick(option)}
-                            className="w-full text-left px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-sm transition-colors flex items-center justify-between group"
+                            className="w-full text-left px-3 py-2 rounded-lg bg-background hover:bg-accent-teal/20 text-sm transition-colors flex items-center justify-between group text-primary"
                           >
                             <span>{option}</span>
                             <ChevronRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -339,14 +339,14 @@ export default function Chatbot() {
             </div>
 
             {/* Footer */}
-            <div className="p-4 border-t border-white/10 bg-white/5">
-              <p className="text-xs text-gray-400 text-center">
+            <div className="p-4 border-t border-utility-grey/20 bg-white/70">
+              <p className="text-xs text-utility-grey text-center">
                 Need immediate help?{' '}
                 <a
                   href="https://wa.me/1234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-400 hover:text-green-300"
+                  className="text-accent-teal hover:text-secondary"
                 >
                   WhatsApp us
                 </a>

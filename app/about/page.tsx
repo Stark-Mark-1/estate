@@ -71,11 +71,11 @@ export default function About() {
             className="space-y-6"
           >
             <h1 className="text-6xl font-bold gradient-text">About ESTATE</h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl text-utility-grey leading-relaxed">
               For over 15 years, ESTATE has been at the forefront of premium real estate development, 
               creating exceptional properties that redefine luxury living and commercial excellence.
             </p>
-            <p className="text-lg text-gray-400 leading-relaxed">
+            <p className="text-lg text-utility-grey leading-relaxed">
               Our commitment to quality, innovation, and customer satisfaction has made us a trusted 
               name in the real estate industry. We don't just build properties; we create communities 
               and shape lifestyles.
@@ -106,7 +106,7 @@ export default function About() {
             className="p-8 rounded-2xl glass-effect"
           >
             <h2 className="text-3xl font-bold mb-4 gradient-text">Our Mission</h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-utility-grey leading-relaxed">
               To deliver exceptional real estate solutions that exceed expectations, creating value 
               for our customers while building sustainable, thriving communities that stand the test of time.
             </p>
@@ -118,7 +118,7 @@ export default function About() {
             className="p-8 rounded-2xl glass-effect"
           >
             <h2 className="text-3xl font-bold mb-4 gradient-text">Our Vision</h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-utility-grey leading-relaxed">
               To be the most trusted and innovative real estate developer, recognized for excellence 
               in design, quality, and customer service, setting new benchmarks in the industry.
             </p>
@@ -135,7 +135,7 @@ export default function About() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">Our Values</h2>
-          <p className="text-xl text-gray-400">The principles that guide everything we do</p>
+          <p className="text-xl text-utility-grey">The principles that guide everything we do</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => {
@@ -149,9 +149,9 @@ export default function About() {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 rounded-2xl glass-effect hover-lift text-center"
               >
-                <Icon size={48} className="text-blue-400 mx-auto mb-4" />
+                <Icon size={48} className="text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                <p className="text-gray-400 text-sm">{value.description}</p>
+                <p className="text-utility-grey text-sm">{value.description}</p>
               </motion.div>
             )
           })}
@@ -167,10 +167,10 @@ export default function About() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">Our Journey</h2>
-          <p className="text-xl text-gray-400">Key milestones in our growth story</p>
+          <p className="text-xl text-utility-grey">Key milestones in our growth story</p>
         </motion.div>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-600 hidden md:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary hidden md:block" />
           <div className="space-y-12">
             {milestones.map((milestone, index) => (
               <motion.div
@@ -182,13 +182,13 @@ export default function About() {
               >
                 <div className="w-full md:w-1/2 p-6">
                   <div className={`p-6 rounded-2xl glass-effect ${index % 2 === 0 ? 'md:mr-auto md:max-w-md' : 'md:ml-auto md:max-w-md'}`}>
-                    <div className="text-2xl font-bold text-blue-400 mb-2">{milestone.year}</div>
+                    <div className="text-2xl font-bold text-secondary mb-2">{milestone.year}</div>
                     <div className="text-xl font-semibold mb-2">{milestone.event}</div>
-                    <div className="text-gray-400">{milestone.description}</div>
+                    <div className="text-utility-grey">{milestone.description}</div>
                   </div>
                 </div>
                 <div className="hidden md:block w-1/2" />
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-gray-900 hidden md:block" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-primary hidden md:block" />
               </motion.div>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function About() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl font-bold mb-4 gradient-text">Leadership Team</h2>
-          <p className="text-xl text-gray-400">The experts driving our success</p>
+          <p className="text-xl text-utility-grey">The experts driving our success</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
@@ -225,7 +225,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-              <p className="text-gray-400">{member.role}</p>
+              <p className="text-utility-grey">{member.role}</p>
             </motion.div>
           ))}
         </div>

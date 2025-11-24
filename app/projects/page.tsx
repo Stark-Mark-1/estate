@@ -106,7 +106,7 @@ export default function Projects() {
           className="text-center"
         >
           <h1 className="text-6xl font-bold mb-6 gradient-text">Our Projects</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-utility-grey max-w-3xl mx-auto">
             Discover our portfolio of premium real estate developments, each designed to exceed expectations.
           </p>
         </motion.div>
@@ -115,13 +115,13 @@ export default function Projects() {
       {/* Filter Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="flex items-center justify-center space-x-4 flex-wrap gap-4">
-          <Filter size={20} className="text-gray-400" />
+          <Filter size={20} className="text-utility-grey" />
           <button
             onClick={() => setFilter('all')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'all'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             All Projects
@@ -130,8 +130,8 @@ export default function Projects() {
             onClick={() => setFilter('completed')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'completed'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Completed
@@ -140,8 +140,8 @@ export default function Projects() {
             onClick={() => setFilter('ongoing')}
             className={`px-6 py-2 rounded-lg font-medium transition-colors ${
               filter === 'ongoing'
-                ? 'bg-blue-600 text-white'
-                : 'glass-effect text-gray-300 hover:text-white'
+                ? 'bg-accent-teal text-primary'
+                : 'glass-effect text-utility-grey hover:text-primary'
             }`}
           >
             Ongoing
@@ -169,35 +169,35 @@ export default function Projects() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent-amber text-primary text-sm font-medium">
                     {project.status}
                   </div>
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-purple-600 text-white text-sm font-medium">
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-teal text-primary text-sm font-medium">
                     {project.type}
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <div className="flex items-center text-gray-400 mb-4">
-                    <MapPin size={16} className="mr-2" />
+                  <div className="flex items-center text-utility-grey mb-4">
+                    <MapPin size={16} className="mr-2 text-secondary" />
                     <span>{project.location}</span>
                   </div>
-                  <p className="text-gray-300 mb-6 text-sm">{project.description}</p>
+                  <p className="text-utility-grey mb-6 text-sm">{project.description}</p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Bed size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{project.bedrooms}</span>
+                      <Bed size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{project.bedrooms}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Bath size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{project.bathrooms}</span>
+                      <Bath size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{project.bathrooms}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Square size={18} className="text-blue-400" />
-                      <span className="text-sm text-gray-300">{project.area}</span>
+                      <Square size={18} className="text-secondary" />
+                      <span className="text-sm text-utility-grey">{project.area}</span>
                     </div>
-                    <div className="text-sm text-blue-400 font-semibold">
+                    <div className="text-sm text-secondary font-semibold">
                       {project.price}
                     </div>
                   </div>
@@ -205,14 +205,14 @@ export default function Projects() {
                   <div className="flex space-x-3">
                     <Link
                       href={`/projects/${project.id}`}
-                      className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-center flex items-center justify-center space-x-2"
+                      className="flex-1 px-4 py-2 bg-accent-coral hover:bg-secondary text-white font-medium rounded-lg transition-colors text-center flex items-center justify-center space-x-2"
                     >
                       <span>View Details</span>
                       <ArrowRight size={16} />
                     </Link>
                     <button
                       onClick={openModal}
-                      className="px-4 py-2 glass-effect hover:bg-white/10 text-white font-medium rounded-lg transition-colors"
+                      className="px-4 py-2 glass-effect hover:bg-background text-primary font-medium rounded-lg transition-colors"
                     >
                       Enquire
                     </button>
@@ -233,13 +233,13 @@ export default function Projects() {
           className="text-center p-12 rounded-2xl glass-effect"
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Interested in Our Projects?</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-utility-grey mb-8">
             Get in touch with our team to learn more about our developments
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openModal}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
             >
               Get in Touch
             </button>
@@ -247,7 +247,7 @@ export default function Projects() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors"
             >
               WhatsApp Us
             </a>

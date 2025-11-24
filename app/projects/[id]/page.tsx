@@ -165,7 +165,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
     return (
       <div className="pt-32 pb-20 text-center">
         <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-        <Link href="/projects" className="text-blue-400 hover:text-blue-300">
+        <Link href="/projects" className="text-secondary hover:text-accent-coral">
           Back to Projects
         </Link>
       </div>
@@ -178,7 +178,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <Link
           href="/projects"
-          className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+          className="inline-flex items-center space-x-2 text-utility-grey hover:text-primary transition-colors"
         >
           <ArrowLeft size={20} />
           <span>Back to Projects</span>
@@ -199,19 +199,19 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-white/70" />
           <div className="absolute bottom-8 left-8 right-8">
             <div className="flex items-center space-x-4 mb-4">
-              <span className="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-medium">
+              <span className="px-4 py-2 rounded-full bg-accent-amber text-primary text-sm font-medium">
                 {project.status}
               </span>
-              <span className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm font-medium">
+              <span className="px-4 py-2 rounded-full bg-accent-teal text-primary text-sm font-medium">
                 {project.type}
               </span>
             </div>
-            <h1 className="text-5xl font-bold mb-2">{project.title}</h1>
-            <div className="flex items-center text-gray-300">
-              <MapPin size={20} className="mr-2" />
+            <h1 className="text-5xl font-bold mb-2 text-primary">{project.title}</h1>
+            <div className="flex items-center text-primary">
+              <MapPin size={20} className="mr-2 text-secondary" />
               <span className="text-lg">{project.location}</span>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold mb-4 gradient-text">About This Project</h2>
-              <div className="text-gray-300 leading-relaxed text-lg whitespace-pre-line space-y-4">
+              <div className="text-utility-grey leading-relaxed text-lg whitespace-pre-line space-y-4">
                 {project.description.split('\n\n').map((paragraph: string, index: number) => (
                   <p key={index} className="mb-4">{paragraph}</p>
                 ))}
@@ -268,8 +268,8 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {project.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg glass-effect">
-                    <div className="w-2 h-2 rounded-full bg-blue-400" />
-                    <span className="text-gray-300">{feature}</span>
+                    <div className="w-2 h-2 rounded-full bg-accent-teal" />
+                    <span className="text-utility-grey">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -288,53 +288,53 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
-                  <Bed size={20} className="text-blue-400" />
+                  <Bed size={20} className="text-secondary" />
                   <div>
-                    <div className="text-sm text-gray-400">Bedrooms</div>
-                    <div className="text-white font-medium">{project.bedrooms}</div>
+                    <div className="text-sm text-utility-grey">Bedrooms</div>
+                    <div className="text-primary font-medium">{project.bedrooms}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Bath size={20} className="text-blue-400" />
+                  <Bath size={20} className="text-secondary" />
                   <div>
-                    <div className="text-sm text-gray-400">Bathrooms</div>
-                    <div className="text-white font-medium">{project.bathrooms}</div>
+                    <div className="text-sm text-utility-grey">Bathrooms</div>
+                    <div className="text-primary font-medium">{project.bathrooms}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Square size={20} className="text-blue-400" />
+                  <Square size={20} className="text-secondary" />
                   <div>
-                    <div className="text-sm text-gray-400">Area</div>
-                    <div className="text-white font-medium">{project.area}</div>
+                    <div className="text-sm text-utility-grey">Area</div>
+                    <div className="text-primary font-medium">{project.area}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Building size={20} className="text-blue-400" />
+                  <Building size={20} className="text-secondary" />
                   <div>
-                    <div className="text-sm text-gray-400">Total Units</div>
-                    <div className="text-white font-medium">{project.units}</div>
+                    <div className="text-sm text-utility-grey">Total Units</div>
+                    <div className="text-primary font-medium">{project.units}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Calendar size={20} className="text-blue-400" />
+                  <Calendar size={20} className="text-secondary" />
                   <div>
-                    <div className="text-sm text-gray-400">Completion</div>
-                    <div className="text-white font-medium">{project.completionDate}</div>
+                    <div className="text-sm text-utility-grey">Completion</div>
+                    <div className="text-primary font-medium">{project.completionDate}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <div className="text-sm text-gray-400 mb-2">Starting Price</div>
-                <div className="text-3xl font-bold text-blue-400 mb-6">{project.price}</div>
+              <div className="mt-8 pt-8 border-t border-utility-grey/20">
+                <div className="text-sm text-utility-grey mb-2">Starting Price</div>
+                <div className="text-3xl font-bold text-secondary mb-6">{project.price}</div>
                 
                 <button
                   onClick={openModal}
-                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors mb-3"
+                  className="w-full px-6 py-3 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors mb-3"
                 >
                   Get in Touch
                 </button>
@@ -342,19 +342,19 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                   href="https://wa.me/1234567890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors text-center"
+                  className="block w-full px-6 py-3 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors text-center"
                 >
                   WhatsApp Us
                 </a>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-white/10">
+              <div className="mt-8 pt-8 border-t border-utility-grey/20">
                 <h4 className="text-lg font-semibold mb-4">Amenities</h4>
                 <div className="space-y-2">
                   {project.amenities.map((amenity: string, index: number) => (
                     <div key={index} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                      <span className="text-sm text-gray-300">{amenity}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent-teal" />
+                      <span className="text-sm text-utility-grey">{amenity}</span>
                     </div>
                   ))}
                 </div>

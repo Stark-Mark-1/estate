@@ -4,6 +4,7 @@ import { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
+import { brandColors } from '@/lib/colors'
 
 function Building({ position }: { position: [number, number, number] }) {
   const meshRef = useRef<THREE.Mesh>(null)
@@ -18,10 +19,10 @@ function Building({ position }: { position: [number, number, number] }) {
     <mesh ref={meshRef} position={position} castShadow receiveShadow>
       <boxGeometry args={[2, 4, 2]} />
       <meshStandardMaterial
-        color="#3b82f6"
+        color={brandColors.secondary}
         metalness={0.3}
         roughness={0.4}
-        emissive="#60a5fa"
+        emissive={brandColors.accentTeal}
         emissiveIntensity={0.5}
       />
     </mesh>
@@ -32,7 +33,7 @@ function Ground() {
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} receiveShadow>
       <planeGeometry args={[20, 20]} />
-      <meshStandardMaterial color="#1e293b" />
+      <meshStandardMaterial color={brandColors.primary} />
     </mesh>
   )
 }
@@ -62,8 +63,8 @@ export default function ThreeScene() {
           shadow-mapSize-width={2048}
           shadow-mapSize-height={2048}
         />
-        <pointLight position={[-10, 5, -10]} intensity={1.5} color="#60a5fa" />
-        <pointLight position={[10, 5, 10]} intensity={1} color="#60a5fa" />
+        <pointLight position={[-10, 5, -10]} intensity={1.5} color={brandColors.accentTeal} />
+        <pointLight position={[10, 5, 10]} intensity={1} color={brandColors.accentTeal} />
         {buildings.map((building, i) => (
           <Building key={i} position={building.position} />
         ))}

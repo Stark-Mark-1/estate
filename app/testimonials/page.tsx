@@ -108,7 +108,7 @@ export default function Testimonials() {
           className="text-center"
         >
           <h1 className="text-6xl font-bold mb-6 gradient-text">Client Testimonials</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-utility-grey max-w-3xl mx-auto">
             Hear from our satisfied clients who have made ESTATE their trusted real estate partner
           </p>
         </motion.div>
@@ -126,7 +126,7 @@ export default function Testimonials() {
               transition={{ delay: index * 0.1 }}
               className="p-8 rounded-2xl glass-effect hover-lift relative"
             >
-              <Quote size={32} className="text-blue-400/30 absolute top-6 right-6" />
+              <Quote size={32} className="text-secondary/30 absolute top-6 right-6" />
               
               <div className="flex items-center mb-6">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
@@ -138,24 +138,24 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <h4 className="font-semibold text-primary">{testimonial.name}</h4>
+                  <p className="text-sm text-utility-grey">{testimonial.role}</p>
                 </div>
               </div>
 
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                  <Star key={i} size={16} className="text-accent-amber fill-accent-amber" />
                 ))}
               </div>
 
-              <p className="text-gray-300 mb-6 italic leading-relaxed relative z-10">
+              <p className="text-utility-grey mb-6 italic leading-relaxed relative z-10">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
 
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-sm text-blue-400 font-medium mb-1">{testimonial.property}</p>
-                <p className="text-xs text-gray-500">{testimonial.date}</p>
+              <div className="pt-6 border-t border-utility-grey/20">
+                <p className="text-sm text-secondary font-medium mb-1">{testimonial.property}</p>
+                <p className="text-xs text-utility-grey">{testimonial.date}</p>
               </div>
             </motion.div>
           ))}
@@ -172,19 +172,19 @@ export default function Testimonials() {
         >
           <div className="text-center p-8 rounded-2xl glass-effect">
             <div className="text-5xl font-bold gradient-text mb-2">98%</div>
-            <div className="text-gray-400">Satisfaction Rate</div>
+            <div className="text-utility-grey">Satisfaction Rate</div>
           </div>
           <div className="text-center p-8 rounded-2xl glass-effect">
             <div className="text-5xl font-bold gradient-text mb-2">2000+</div>
-            <div className="text-gray-400">Happy Clients</div>
+            <div className="text-utility-grey">Happy Clients</div>
           </div>
           <div className="text-center p-8 rounded-2xl glass-effect">
             <div className="text-5xl font-bold gradient-text mb-2">4.9/5</div>
-            <div className="text-gray-400">Average Rating</div>
+            <div className="text-utility-grey">Average Rating</div>
           </div>
           <div className="text-center p-8 rounded-2xl glass-effect">
             <div className="text-5xl font-bold gradient-text mb-2">15+</div>
-            <div className="text-gray-400">Years Experience</div>
+            <div className="text-utility-grey">Years Experience</div>
           </div>
         </motion.div>
       </section>

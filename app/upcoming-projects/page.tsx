@@ -76,7 +76,7 @@ export default function UpcomingProjects() {
           className="text-center"
         >
           <h1 className="text-6xl font-bold mb-6 gradient-text">Upcoming Projects</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-utility-grey max-w-3xl mx-auto">
             Be among the first to discover our future developments. Reserve your space today.
           </p>
         </motion.div>
@@ -102,62 +102,62 @@ export default function UpcomingProjects() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-yellow-500 text-black text-sm font-bold">
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-amber text-primary text-sm font-bold">
                     {project.status}
                   </div>
                 </div>
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="text-3xl font-bold">{project.title}</h2>
-                    <span className="px-3 py-1 rounded-full bg-purple-600 text-white text-sm font-medium">
+                    <span className="px-3 py-1 rounded-full bg-accent-teal text-primary text-sm font-medium">
                       {project.type}
                     </span>
                   </div>
                   
-                  <div className="flex items-center text-gray-400 mb-6">
-                    <MapPin size={18} className="mr-2" />
+                  <div className="flex items-center text-utility-grey mb-6">
+                    <MapPin size={18} className="mr-2 text-secondary" />
                     <span>{project.location}</span>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                  <p className="text-utility-grey mb-6 leading-relaxed">{project.description}</p>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="flex items-center space-x-2">
-                      <Calendar size={18} className="text-blue-400" />
+                      <Calendar size={18} className="text-secondary" />
                       <div>
-                        <div className="text-xs text-gray-400">Launch</div>
-                        <div className="text-sm text-white font-medium">{project.launchDate}</div>
+                        <div className="text-xs text-utility-grey">Launch</div>
+                        <div className="text-sm text-primary font-medium">{project.launchDate}</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <Clock size={18} className="text-blue-400" />
+                      <Clock size={18} className="text-secondary" />
                       <div>
-                        <div className="text-xs text-gray-400">Completion</div>
-                        <div className="text-sm text-white font-medium">{project.completionDate}</div>
+                        <div className="text-xs text-utility-grey">Completion</div>
+                        <div className="text-sm text-primary font-medium">{project.completionDate}</div>
                       </div>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-utility-grey mb-3">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
                       {project.features.map((feature, i) => (
                         <div key={i} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                          <span className="text-sm text-gray-400">{feature}</span>
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent-teal" />
+                          <span className="text-sm text-utility-grey">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                  <div className="flex items-center justify-between pt-6 border-t border-utility-grey/20">
                     <div>
-                      <div className="text-sm text-gray-400">Starting Price</div>
-                      <div className="text-xl font-bold text-blue-400">{project.price}</div>
+                      <div className="text-sm text-utility-grey">Starting Price</div>
+                      <div className="text-xl font-bold text-secondary">{project.price}</div>
                     </div>
                     <button
                       onClick={openModal}
-                      className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
+                      className="px-6 py-3 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
                     >
                       <span>Reserve Now</span>
                       <ArrowRight size={18} />
@@ -179,13 +179,13 @@ export default function UpcomingProjects() {
           className="text-center p-12 rounded-2xl glass-effect"
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Early Bird Benefits</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-utility-grey mb-8">
             Reserve your space early and enjoy exclusive pricing and priority selection
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsContactOpen(true)}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
             >
               Get in Touch
             </button>
@@ -193,7 +193,7 @@ export default function UpcomingProjects() {
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+              className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors"
             >
               WhatsApp Us
             </a>

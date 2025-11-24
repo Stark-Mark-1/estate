@@ -111,7 +111,7 @@ export default function MediaCoverage() {
           className="text-center"
         >
           <h1 className="text-6xl font-bold mb-6 gradient-text">Media Coverage</h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-utility-grey max-w-3xl mx-auto">
             Stay updated with the latest news, features, and recognition of ESTATE in the media
           </p>
         </motion.div>
@@ -138,25 +138,25 @@ export default function MediaCoverage() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-medium">
+                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-teal text-primary text-xs font-medium">
                       {article.category}
                     </div>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center text-xs text-gray-400 mb-3">
-                      <Newspaper size={14} className="mr-2" />
+                    <div className="flex items-center text-xs text-utility-grey mb-3">
+                      <Newspaper size={14} className="mr-2 text-secondary" />
                       <span>{article.publication}</span>
                       <span className="mx-2">•</span>
-                      <Calendar size={14} className="mr-2" />
+                      <Calendar size={14} className="mr-2 text-secondary" />
                       <span>{article.date}</span>
                     </div>
-                    <h2 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+                    <h2 className="text-xl font-bold mb-3 group-hover:text-secondary transition-colors">
                       {article.title}
                     </h2>
-                    <p className="text-gray-400 text-sm mb-4 flex-1">
+                    <p className="text-utility-grey text-sm mb-4 flex-1">
                       {article.excerpt}
                     </p>
-                    <div className="flex items-center text-blue-400 text-sm font-medium">
+                    <div className="flex items-center text-secondary text-sm font-medium">
                       <span>Read More</span>
                       <ExternalLink size={16} className="ml-2" />
                     </div>
@@ -177,12 +177,12 @@ export default function MediaCoverage() {
           className="text-center p-12 rounded-2xl glass-effect"
         >
           <h2 className="text-4xl font-bold mb-4 gradient-text">Media Inquiries</h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-utility-grey mb-8">
             For press inquiries, interviews, or media kit requests, please contact our media relations team
           </p>
           <a
             href="mailto:media@estate.com"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
           >
             <span>Contact Media Team</span>
             <ExternalLink size={20} />

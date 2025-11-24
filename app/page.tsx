@@ -90,16 +90,16 @@ export default function Home() {
             <h1 className="text-6xl md:text-8xl font-bold">
               <span className="gradient-text">Your Dream Life</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-utility-grey max-w-3xl mx-auto">
               Starts with the Perfect Home
             </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-utility-grey max-w-2xl mx-auto">
               Wake up to breathtaking views. Create memories in spaces designed for living. Build the life you've always imagined.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <button
                 onClick={openModal}
-                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
+                className="px-8 py-4 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
               >
                 <span>Get in Touch</span>
                 <ArrowRight size={20} />
@@ -108,7 +108,7 @@ export default function Home() {
                 href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors flex items-center space-x-2"
+                className="px-8 py-4 bg-accent-teal hover:bg-secondary text-primary font-semibold rounded-lg transition-colors flex items-center space-x-2"
               >
                 <span>WhatsApp Us</span>
                 <ArrowRight size={20} />
@@ -128,7 +128,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold mb-4 gradient-text">Where Dreams Come True</h2>
-            <p className="text-xl text-gray-400">Every home is a new beginning</p>
+            <p className="text-xl text-utility-grey">Every home is a new beginning</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {aspirations.map((aspiration, index) => {
@@ -142,10 +142,10 @@ export default function Home() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center p-8 rounded-2xl glass-effect hover-lift"
                 >
-                  <Icon size={48} className="text-blue-400 mx-auto mb-4" />
+                  <Icon size={48} className="text-accent-amber mx-auto mb-4" />
                   <div className="text-4xl font-bold gradient-text mb-2">{aspiration.value}</div>
-                  <div className="text-gray-300 font-semibold mb-2">{aspiration.label}</div>
-                  <div className="text-sm text-gray-400">{aspiration.description}</div>
+                  <div className="text-utility-grey font-semibold mb-2">{aspiration.label}</div>
+                  <div className="text-sm text-utility-grey">{aspiration.description}</div>
                 </motion.div>
               )
             })}
@@ -163,7 +163,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-4 gradient-text">Your Next Chapter Awaits</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-utility-grey max-w-2xl mx-auto">
               Discover homes where every sunrise brings new possibilities, and every evening ends with contentment
             </p>
           </motion.div>
@@ -187,17 +187,17 @@ export default function Home() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
+                      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent-teal text-primary text-sm font-medium">
                         {project.status}
                       </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-gray-400 mb-4">{project.location}</p>
-                      <p className="text-sm text-gray-500 mb-4 italic">Where your story begins</p>
+                      <p className="text-utility-grey mb-4">{project.location}</p>
+                      <p className="text-sm text-utility-grey mb-4 italic">Where your story begins</p>
                       <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-300">{project.units}</span>
-                        <span className="text-blue-400 font-semibold">{project.price}</span>
+                        <span className="text-utility-grey">{project.units}</span>
+                        <span className="text-secondary font-semibold">{project.price}</span>
                       </div>
                     </div>
                   </div>
@@ -209,7 +209,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/projects"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
             >
               <span>View All Projects</span>
               <ArrowRight size={20} />
@@ -228,7 +228,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-4 gradient-text">Lives Transformed, Dreams Realized</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-utility-grey max-w-2xl mx-auto">
               Real stories of happiness, belonging, and the joy of coming home
             </p>
           </motion.div>
@@ -253,15 +253,15 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">{story.name}</h4>
-                    <p className="text-sm text-gray-400">{story.role}</p>
+                    <h4 className="font-semibold text-primary">{story.name}</h4>
+                    <p className="text-sm text-utility-grey">{story.role}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 italic">&ldquo;{story.quote}&rdquo;</p>
-                <p className="text-sm text-blue-400 font-medium">{story.property}</p>
+                <p className="text-utility-grey mb-4 italic">&ldquo;{story.quote}&rdquo;</p>
+                <p className="text-sm text-secondary font-medium">{story.property}</p>
                 <div className="flex mt-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                    <Star key={i} size={16} className="text-accent-amber fill-accent-amber" />
                   ))}
                 </div>
               </motion.div>
@@ -271,7 +271,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/testimonials"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-accent-coral hover:bg-secondary text-white font-semibold rounded-lg transition-colors"
             >
               <span>Read More Stories</span>
               <ArrowRight size={20} />

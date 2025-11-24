@@ -5,6 +5,13 @@
 :root {
   --font-inter: 'Inter', system-ui, sans-serif;
   --font-display: 'Inter', system-ui, sans-serif;
+  --color-primary: #0a1a3d;
+  --color-background: #f6f7fb;
+  --color-accent-coral: #ff5a4a;
+  --color-accent-teal: #00a8a8;
+  --color-accent-amber: #ffc145;
+  --color-secondary: #3b6ea5;
+  --color-utility-grey: #7a7f85;
 }
 
 * {
@@ -19,8 +26,8 @@ html {
 
 body {
   font-family: var(--font-inter);
-  background: #0a0a0a;
-  color: #ffffff;
+  background: var(--color-background);
+  color: var(--color-primary);
   overflow-x: hidden;
 }
 
@@ -30,11 +37,13 @@ body {
   }
   
   .gradient-text {
-    @apply text-blue-400;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-accent-coral));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .glass-effect {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+    @apply backdrop-blur-xl bg-white/80 border border-utility-grey/30 shadow-lg;
   }
   
   .hover-lift {
@@ -48,15 +57,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
+  background: var(--color-utility-grey);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2a2a;
+  background: var(--color-secondary);
 }
 
